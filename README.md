@@ -21,6 +21,9 @@ pip install -r requirements.txt
 You can download Labeled Faces in the Wild (LFW) database from here -
 [http://vis-www.cs.umass.edu/lfw/](http://vis-www.cs.umass.edu/lfw/)
 
+To use the FaceNet model for embedding generation, download the model here - 
+[https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-)
+
 ## Run it
 
 You can see various options by issuing the following command

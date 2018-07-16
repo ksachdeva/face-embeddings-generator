@@ -104,3 +104,9 @@ venv.bak/
 .mypy_cache/
 .env3
 embeddings
+
+# mypy2
+.lfw
+.out
+.logs
+.models\20180402-114759
