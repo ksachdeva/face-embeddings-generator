@@ -2,14 +2,17 @@ import sys
 import argparse
 import lfw
 import gen_dlib
+import gen_facenet
 
 def main(args):
     dataset = lfw.get_dataset(args.lfw_dir, args.max_num_classes, args.min_images_per_class)
 
     if args.network == 'dlib':
         gen_dlib.generate_embeddings(dataset, args.models_dir, args.out_dir)
+    elif args.network == 'facenet':
+        gen_facenet.generate_embeddings(dataset, args.models_dir, args.out_dir)
     else:
-        raise NotImplementedError('Facenet is not supported yet')
+        raise NotImplementedError('Please choose a supported model')
 
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
