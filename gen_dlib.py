@@ -15,6 +15,7 @@ def generate_embeddings(dataset, models_dir, out_dir):
 
     # go over each class and its images in the dataset
     # and compute the encodings
+    skipped = 0
     for e in dataset:
         print('Processing %s ..' % e.name)
         embeddings = []
@@ -23,6 +24,7 @@ def generate_embeddings(dataset, models_dir, out_dir):
             dets = detector(img, 1)
             # Only process images that have one face
             if len(dets) != 1:
+                skipped+=1
                 continue
 
             for d in dets:
@@ -32,7 +34,7 @@ def generate_embeddings(dataset, models_dir, out_dir):
 
         anEntry = {'name' : e.name, 'embeddings' : embeddings}
         data.append(anEntry)
-
+    print("Skipped total number of %s images" %skipped)
     out_file_path = os.path.join(os.path.abspath(out_dir), 'dlib.json')
     with open(out_file_path, 'w+') as outfile:
         json.dump(data, outfile)
