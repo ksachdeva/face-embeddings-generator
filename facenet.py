@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# Script copied from https://github.com/davidsandberg/facenet, with small modifications to not use some of the libraries
+# Script copied from https://github.com/davidsandberg/facenet, with small modifications to not use some of the functions
 
 # pylint: disable=missing-docstring
 from __future__ import absolute_import

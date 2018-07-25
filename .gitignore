@@ -106,7 +106,10 @@ venv.bak/
 embeddings
 
 # mypy2
-.lfw
-.out
-.logs
-.models\20180402-114759
+lfw/
+out/
+out-Copy/
+logs/
+models/
+.env_FEGC/
+.vscode/
